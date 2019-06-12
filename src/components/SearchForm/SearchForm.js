@@ -3,10 +3,10 @@ import PropTypes from 'prop-types'
 
 const SearchForm = ({ searchRepos }) => (
     <div>
-        <form onSubmit={() => searchRepos("tetris", ">500", "MIT", "true")}>
+        <form onSubmit={(event) => searchRepos(event, "tetris", ">500", "MIT", "true")}>
             <label>
                 Text
-                <input type="text" name="text" />
+                <input type="text" name="q" />
             </label>
             <label>
                 Stars
@@ -22,7 +22,7 @@ const SearchForm = ({ searchRepos }) => (
                 </select>
             </label>
             <label>
-                <input type="checkbox" name="forked" />
+                <input type="checkbox" name="fork" />
                 Include forked
             </label>
             <input type="submit" value="SEARCH"/>

@@ -1,8 +1,15 @@
 import React from 'react'
 
-const Repo = () => (
+const Repo = ({ repo }) => (
     <div>
-        repo
+        <a href={repo.html_url}>{repo.full_name}</a>
+        <li>{repo.description}</li>
+        <li>Stars: {repo.stargazers_count}</li>
+        <li>License: {repo.license.name}</li>
+        {repo.fork &&
+            <li>forked</li>
+        }
+        ---------------------------------------
     </div>
 )
 
