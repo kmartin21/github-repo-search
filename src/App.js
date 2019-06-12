@@ -15,5 +15,5 @@ const App = () => (
     </div>
   </Router>
 )
-// https://api.github.com/search/repositories?q=tetris+stars:%3E500+license:MIT+fork:true
+
 export default App;
